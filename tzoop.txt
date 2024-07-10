@@ -1,0 +1,37 @@
+Talabalarni sinflarga tayinlash:
+
+Talabalarni ma'lum bir sinfga tayinlash funksiyasi.
+Bir sinfga tegishli bo'lgan barcha talabalarning ro'yxatini olish funksiyasi.
+
+
+O'qituvchilarni fanlarga tayinlash:
+
+O'qituvchilarni ma'lum bir fanga tayinlash funksiyasi.
+Bir fanga tegishli bo'lgan barcha o'qituvchilarning ro'yxatini olish funksiyasi.
+Jadval va dars jadvalini boshqarish:
+
+Sinflar uchun dars jadvalini qo'shish, yangilash va ko'rish funksiyalari.
+O'qituvchilarning dars jadvalini ko'rish funksiyasi.
+O'quv yili va semestrlarni boshqarish:
+
+O'quv yili va semestrlarni qo'shish, yangilash va o'chirish funksiyalari.
+Har bir talabaning o'quv yilidagi yoki semestrdagi baholarini boshqarish funksiyalari.
+Baholash tizimi:
+
+Talabalar uchun baholarni qo'shish, yangilash va o'chirish funksiyalari.
+Talabalar uchun baholarni ko'rish funksiyalari.
+Hujjatlar va hisobotlar:
+
+Talabalar, o'qituvchilar va sinflar uchun hujjatlarni yaratish va saqlash funksiyalari.
+Har bir o'quv yilining yakunida hisobotlarni yaratish va eksport qilish funksiyalari.
+Xabarnomalar va eslatmalar:
+
+Talabalar va o'qituvchilar uchun xabarnomalar va eslatmalar yaratish funksiyalari.
+Eslatmalarni avtomatik ravishda yuborish funksiyalari.
+Tadbirlar va kalendar:
+
+Maktab tadbirlari va kalendarni boshqarish funksiyalari.
+Talabalar va o'qituvchilar uchun tadbirlarni ko'rish funksiyalari.
+Ijtimoiy tarmoqlar bilan integratsiya:
+
+Talabalar va o'qituvchilar uchun ijtimoiy tarmoqlar bilan integratsiya qilish funksiyalari.
