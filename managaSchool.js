@@ -5,7 +5,15 @@ class manageSchool {
         }
         this.name = name,
             this.students = [],
-            this.classroom = [],
+            this.classroom = [
+                {
+                    id: 1,
+                    name: "class 1",
+                    seats: 30,
+                    class: 1,
+                    classStudents: [],
+                }
+            ],
             this.teachers = [],
             this.subjects = [],
             manageSchool.instance = this
@@ -21,19 +29,19 @@ class manageSchool {
     }
     addStudent(student) {
         student.id = this.students.length + 1
-        if (student.age < 18) {
-            console.log("sorry you are not allowed");
-        } else {
+        if (student.age < 22) {
             this.students.push(student)
+            console.log(`student added: ${student.name}`);
+        } else {
+            console.log("sorry you are not allowed");
         }
     }
     addClass(classroom) {
-        classroom.id = this.classroom.length + 1
-        if (classroom.name.length > 5 && classroom.seats > 30 && (classroom.class >= 1 && classroom.class <= 11)) {
-            this.classroom.push(classs)
-            console.log(`class added: ${classroom.name}`)
+        classroom.id = this.classroom.length + 1;
+        if (classroom.name.length > 5 && classroom.seats < 30 && (classroom.class >= 1 && classroom.class <= 11)) {
+            this.classroom.push(classroom);
         } else {
-            console.log("sorry you are not allowed");
+            console.log("Sorry, you are not allowed.");
         }
     }
     addSubject(subject) {
@@ -94,10 +102,27 @@ class manageSchool {
     getAllClassRoom() {
         return this.classroom
     }
-    addStudentClass(student) {
-        // student.class=this.classroom.
+    getClassStudents(classNumber) {
+        const classroom = this.classroom.find(room => room.class === classNumber);
+        if (classroom) {
+            return classroom.classStudents;
+        } else {
+            console.log(`Class ${classNumber} not found`);
+            return null;
+        }
     }
-
+    addStudentClass(student) {
+        const classroom = this.classroom.find(classroom => classroom.class === student.class);
+        if (classroom) {
+            if (!classroom.classStudents) {
+                classroom.classStudents = [];
+            }
+            classroom.classStudents.push(student);
+            console.log(`Student ${student.name} added to class ${classroom.name}`);
+        } else {
+            console.log(`Class not found for student ${student.name}`);
+        }
+    }
     static getInstance(name) {
         if (!manageSchool.instance) {
             manageSchool.instance = new manageSchool(name)
@@ -106,3 +131,91 @@ class manageSchool {
     }
 }
 const school1 = manageSchool.getInstance('Data School');
+school1.addStudent({
+    name: 'Ahmedbe',
+    age: 8,
+    class: 2
+})
+school1.addStudent({
+    name: 'Ahmed',
+    age: 16,
+    class: 7
+})
+school1.addStudent({
+    name: 'John',
+    age: 12,
+    class: 5
+})
+school1.addTeacher({
+    name: 'Dilshod',
+    age: 29,
+    bachelor: true,
+    experience: true,
+    english: true
+})
+school1.addTeacher({
+    name: 'Sardor',
+    age: 39,
+    bachelor: true,
+    experience: true,
+    english: true
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 1,
+})
+
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 2,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 3,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 4,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 5,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 6,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 7,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 8,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 9,
+})
+school1.addClass({
+    name: 'redRoom',
+    seats: 20,
+    class: 10,
+})
+
+
+console.log(school1.getAllStudents());
+console.log(school1.getAllTeachers());
+console.log(school1.getAllClassRoom());
+console.log(school1.getClassStudents(1));
+const newStudent = school1.findStudent(3);
+school1.addStudentClass(newStudent)
