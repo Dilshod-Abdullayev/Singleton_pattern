@@ -5,15 +5,7 @@ class manageSchool {
         }
         this.name = name;
         this.students = [];
-        this.classroom = [
-            {
-                id: 1,
-                name: "class 1",
-                seats: 30,
-                class: 1,
-                classStudents: [],
-            }
-        ];
+        this.classroom = [];
         this.teachers = [];
         this.subjects = [];
         manageSchool.instance = this;
